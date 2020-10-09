@@ -1,1 +1,18 @@
-<p>login works!</p>
+<h2>Inicio de Sesion</h2>
+
+<form [formGroup]="loginForm">
+    <mat-form-field appearance="legacy">
+        <mat-label>Legacy form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+      
+    <input type="text" formControlName="email">
+    <input type="password" formControlName="password">
+    <button type="submit" [disabled]="!loginForm.valid" (click)="ingresar()">Ingresar</button>
+</form>
+
+{{loginForm.value|json}}
+{{ loginForm.status }}
+{{ loginForm.valid }}
