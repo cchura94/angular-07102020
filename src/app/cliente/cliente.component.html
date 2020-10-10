@@ -1,4 +1,33 @@
-<a routerLink="/">INICIO</a> | <a routerLink="/ventas">VENTAS</a> |
+<mat-toolbar  color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Mi APP</span>
+    <span class="example-spacer"></span>
+    <button routerLink="/" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+      INICIO
+    </button>
+    <button routerLink="/nosotros" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+      NOSOTROS
+    </button>
+      <button routerLink="/contacto" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+        CONTACTO
+      </button>
+      <button routerLink="/ventas"  mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+        Ventas
+      </button>
+      <button routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        
+        LOGIN
+      </button>
+  </mat-toolbar>
+
+
+<a routerLink="/">INICIO</a> | <a routerLink="/ventas"></a> |
 <a routerLink="/nosotros">NOSOTROS</a> |
 <a routerLink="/contacto">CONTACTOS</a> | <a routerLink="/login">LOGIN</a> |
 

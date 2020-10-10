@@ -15,6 +15,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {MatButtonModule} from '@angular/material/button';
 import { MaterialModule } from './material/material.module';
+
+import { ToastrModule } from 'ngx-toastr';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

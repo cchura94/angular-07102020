@@ -1,18 +1,30 @@
-<h2>Inicio de Sesion</h2>
+<div class="login">
 
-<form [formGroup]="loginForm">
-    <mat-form-field appearance="legacy">
-        <mat-label>Legacy form field</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
+  <h2>Inicio de Sesion</h2>
+  
+  <form [formGroup]="loginForm">
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Correo</mat-label>
+        <input matInput placeholder="Ej. pat@example.com" formControlName="email">
       
-    <input type="text" formControlName="email">
-    <input type="password" formControlName="password">
-    <button type="submit" [disabled]="!loginForm.valid" (click)="ingresar()">Ingresar</button>
-</form>
+      </mat-form-field>
+    </p>
+        
+    <p>
 
-{{loginForm.value|json}}
-{{ loginForm.status }}
-{{ loginForm.valid }}
+      <mat-form-field class="example-full-width">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput placeholder="*********" formControlName="password">
+      
+      </mat-form-field>
+    </p>
+    <p>
+      <button mat-button color="primary" type="submit" [disabled]="!loginForm.valid" (click)="ingresar()">Ingresar</button>
+  
+    </p>
+  </form>
+  {{loginForm.value|json}}
+  {{ loginForm.valid }}
+
+</div>
