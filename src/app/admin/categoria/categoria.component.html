@@ -1,1 +1,24 @@
-<p>categoria works!</p>
+<h1>Lista de Categorias</h1>
+
+<button mat-raised-button (click)="abrirModal()">Nueva Categoria</button>
+<table class="mat-elevation-z8">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DESCRIPCION</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cat of categorias;let i = index">
+            <td>{{ cat.id }}</td>
+            <td>{{ cat.nombre }}</td>
+            <td>{{ cat.descripcion }}</td>
+            <td>
+                <button (click)="abrirModal(cat)">editar</button>
+                <button (click)="eliminarCategoria(i, cat.id)">eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

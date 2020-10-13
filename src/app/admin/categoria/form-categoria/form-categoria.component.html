@@ -1,0 +1,21 @@
+<h1>{{(estado)?'Editar Categoria': 'Nueva Categoria'}}</h1>
+
+<form [formGroup]="categoriaForm">
+    <p>
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Ingrese Nombre" formControlName="nombre">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input matInput placeholder="Ingrese Descripcion" formControlName="descripcion">
+          
+        </mat-form-field>
+      </p>
+      <button mat-button color="primary" type="submit" [disabled]="!categoriaForm.valid" (click)="guardarCategoria()" *ngIf="!estado">Guardar Categoria</button>
+      <button mat-button color="primary" type="submit" [disabled]="!categoriaForm.valid" (click)="ModificarCategoria()" *ngIf="estado">Modificar Categoria</button>
+  
+
+</form>
+{{categoriaForm.value|json}}
