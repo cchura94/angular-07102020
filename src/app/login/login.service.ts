@@ -6,7 +6,7 @@ import { environment } from './../../environments/environment'
   providedIn: 'root'
 })
 export class LoginService {
-  urlbase = environment.servidor1
+  urlbase:string = environment.servidor1
 
   constructor(private http: HttpClient) { }
 

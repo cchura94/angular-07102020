@@ -8,7 +8,7 @@ import { environment } from './../../../environments/environment'
   providedIn: 'root'
 })
 export class CategoriaService {
-  base_url = environment.servidor1
+  base_url:string = environment.servidor1
   headers: HttpHeaders;
 
   constructor(private http: HttpClient, private router: Router) { 

@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  servidor1: "http://edtics.herokuapp.com/api/",
-  servidor2: ""
+  servidor1: "http://edtics.herokuapp.com/api/"
 };
 
 /*
